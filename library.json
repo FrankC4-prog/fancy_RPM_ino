@@ -1,0 +1,23 @@
+{
+  "name": "fancy_RPM",
+  "version": "1.0.0",
+  "description": "fancy ways to visualize rpm on an argb strip, uses ELMDuino and FastLED",
+  "keywords": "rpm, obd, vehicle, elmduino, fastled, led, elm327, CAN, argb",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FrankC4-prog/fancy_RPM_ino.git"
+  },
+  "authors": [
+    {
+      "name": "frankc4",
+      "email": "frankc4.github@gmail.com",
+      "maintainer": true
+    }
+  ],
+  "dependencies": {
+    "PowerBroker2/ELMDuino": "^3.0.0",
+    "FastLED/FastLED": "^3.6.0"
+  },
+  "frameworks": ["arduino"],
+  "platforms": "*"
+}
