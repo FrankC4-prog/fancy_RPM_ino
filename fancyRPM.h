@@ -3,6 +3,6 @@
 #ifndef FANCY_RPM_H
     #define FANCY_RPM_H
 
-    #include "src/fancyRPM.h"
+    #include "src/fkc4/fancy_rpm/fancyRPM.h"
 
 #endif
