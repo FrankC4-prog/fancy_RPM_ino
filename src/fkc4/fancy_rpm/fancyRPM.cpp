@@ -18,7 +18,6 @@ void FancyRPM::_updateRpm() {
     if (elm327.nb_rx_state == ELM_SUCCESS)
     {
         uint16_t rpm = (uint32_t)tempRPM;
-        Serial.print("RPM: "); Serial.println(rpm);
         _updateColor(rpm);
     }
     else if (elm327.nb_rx_state != ELM_GETTING_MSG)
