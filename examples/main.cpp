@@ -3,7 +3,12 @@
 #include <fancyRPM.h>
 #include <RPM_gradient_palettes.h>
 
+// i use the namespace, blame me
 using fkc4::fancy_rpm::FancyRPM;
+
+// WiFi definitions
+#define SERVER_ADDR 192, 168, 0, 10
+#define SSID "WiFi_OBDII"
 
 // ELM327 definitions
 #define ELM_TIMEOUT 2000
@@ -32,10 +37,8 @@ FancyRPM *fancyRpm;
 
 void initWiFi() {
 
-    const char* ssid = "WiFi_OBDII";
-    IPAddress server = IPAddress(192, 168, 0, 10);
-
-    Serial.begin(115200);
+    const char* ssid = SSID;
+    IPAddress serverAddr = IPAddress(SERVER_ADDR);
 
     // Connecting to ELM327 WiFi
     Serial.print("Connecting to ");
@@ -53,7 +56,7 @@ void initWiFi() {
     Serial.println("IP address: ");
     Serial.println(WiFi.localIP());
 
-    if (client.connect(server, 35000))
+    if (client.connect(serverAddr, 35000))
         Serial.println("connected");
     else
     {
@@ -73,6 +76,8 @@ void initLeds() {
 void setup() {
 
     delay(3000);
+
+    Serial.begin(115200);
 
     initLeds();
 
