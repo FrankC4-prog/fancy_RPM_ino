@@ -3,7 +3,7 @@
 
     #include <colorutils.h>
 
-    DEFINE_GRADIENT_PALETTE(fkc4GasolineFiesta) {
+    DEFINE_GRADIENT_PALETTE(avgGasolineGP) {
         0,      0,      255,    0,      // 0    RPM -> Green
         64,     0,      0,      255,    // 1000 RPM -> Blue
         96,     128,    0,      128,    // 1500 RPM -> purple

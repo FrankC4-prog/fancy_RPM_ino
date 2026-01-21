@@ -85,7 +85,7 @@ void setup() {
 
     elm327.begin(client, false, ELM_TIMEOUT);
 
-    fancyRpm = FancyRPM::createFancyRpm(elm327, leds, NUM_LEDS, CRGBPalette16(fkc4GasolineFiesta), MAX_RPM);
+    fancyRpm = FancyRPM::createFancyRpm(elm327, leds, NUM_LEDS, CRGBPalette16(avgGasolineGP), MAX_RPM);
 
 }
 
