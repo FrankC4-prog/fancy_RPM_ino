@@ -1,6 +1,7 @@
 #include <FastLED.h>
 #include <WiFi.h>
 #include <fancyRPM.h>
+#include <RPM_gradient_palettes.h>
 
 using fkc4::fancy_rpm::FancyRPM;
 
@@ -13,14 +14,6 @@ using fkc4::fancy_rpm::FancyRPM;
 #define CHIPSET     WS2812
 #define NUM_LEDS    30
 #define BRIGHTNESS  255
-
-DEFINE_GRADIENT_PALETTE(fiestaGP) { // defines a gradient palette
-    0,      0,      255,    0,      // 0    RPM -> Green
-    64,     0,      0,      255,    // 1000 RPM -> Blue
-    96,     128,    0,      128,    // 1500 RPM -> purple
-    128,    128,    128,    128,    // 2000 RPM -> white
-    255,    255,    0,      0,      // 4000 RPM -> Red
-};
 
 // FancyRPM definitions
 #define MAX_RPM 4000
@@ -87,7 +80,7 @@ void setup() {
 
     elm327.begin(client, false, ELM_TIMEOUT);
 
-    fancyRpm = FancyRPM::createFancyRpm(elm327, leds, NUM_LEDS, CRGBPalette16(fiestaGP), MAX_RPM);
+    fancyRpm = FancyRPM::createFancyRpm(elm327, leds, NUM_LEDS, CRGBPalette16(fkc4GasolineFiesta), MAX_RPM);
 
 }
 
