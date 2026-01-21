@@ -1,5 +1,5 @@
-#ifndef FANCY_RPM_H
-    #define FANCY_RPM_H
+#ifndef FCK4_FANCY_RPM_H
+    #define FCK4_FANCY_RPM_H
 
     #include <cstdint>
     #include <ELMduino.h>
